@@ -5,8 +5,134 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlota Menendez Alvarez</title>
+    <script src="https://kit.fontawesome.com/daec488c78.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="./estilos/reset.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+        /*Encabezado*/
+        header{
+            display: flex;
+            flex-direction: column;
+            height: 30vh;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+        }
+        header>img{
+            width: 200px;
+            border-radius: 100px;
+        }
+        h1{
+            font-size: 2em;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        /*Estilos nav*/
+        nav{
+            position: absolute;
+            top: 0;
+        }
+        nav :nth-child(2){
+            /* display: none; */
+        }
+        nav :nth-child(2):checked+ul{
+            transform: translateX(0);
+        }
+        nav i{
+            padding: 7px;
+            font-size: 1.5em;
+        }
+        nav ul{
+            position: absolute;
+            /* right: 60px; */
+            transition: transform .4s ease;
+        }
+    </style>
 </head>
 <body>
-    <h1>hola</h1>
+    <header>
+        <img src="./imagenes/perfil.jpg">
+        <h1>Carlota Menéndez Álvarez</h1>
+    </header>
+    <nav>
+        <label for="menu">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <input type="checkbox" id="menu">
+        <ul>
+            <li>Estudios</li>
+            <li>Skills</li>
+            <li>Idiomas</li>
+            <li>Experiencia</li>
+            <li>Contacto</li>
+        </ul>
+    </nav>
+    <section>
+        <article>
+            <h2>Información Académica</h2>
+            <ul>
+                <li>Grado Superior Desarrollo de Aplicaciones Web</li>
+            </ul>
+        </article>
+        <article>
+            <h2>Skills</h2>
+            <div class="lenguajes">
+                <span>Java</span>
+                <span>JavaScript</span>
+                <span>CSS</span>
+                <span>HTML</span>
+                <span>XML</span>
+                <span>SQL</span>
+
+            </div>
+        </article>
+        <article>
+            <h2>Idiomas</h2>
+            <div class="idiomas">
+                <div class="ingles">
+                    <img src="./imagenes/ingles.jpg">
+                    <p>Inglés B2</p>
+                </div>
+                <div class="frances">
+                    <img src="./imagenes/francia.jpg">
+                    <p>Francés A2</p>
+                </div>
+                <div class="español">
+                    <img src="./imagenes/español.jpg">
+                    <p>Castellano Nativo</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <h2>Experiencia Laboral</h2>
+            <div class="experiencia">
+                <div> LIUJO </div>
+                <div> Springfield </div>
+                <div> Coconut By Elisabeth </div>
+                <div> Stradivarius </div>
+                <div> ZARA </div>
+            </div>
+        </article>
+        <div class="redesSociales">
+            <img src="./imagenes/facebook.png" alt="facebook">
+            <img src="./imagenes/in.png" alt="linkdlin">
+            <img src="./imagenes/Instagram.png" alt="instagram">
+            <img src="./imagenes/WhatsApp.png" alt="Whatsapp">
+        </div>
+        <article>
+            <h2>Contacto</h2>
+            <input type="text" name="nombre" placeholder="Nombre *" required>
+            <input type="text" name="email" placeholder="Email *" required>
+            <input type="text" name="motivo" placeholder="Motivo " >
+            <input type="text" name="compañia" placeholder="Compañia ">
+            <textarea name="texto" rows="4" cols="40" placeholder="Mensaje">.</textarea>
+            <button>Enviar</button>
+        </article>
+    </section>
+    <footer>
+        <i class="fa-solid fa-arrow-up"></i>
+    </footer>
 </body>
 </html>
