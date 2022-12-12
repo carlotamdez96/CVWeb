@@ -35,10 +35,10 @@
             top: 0;
         }
         nav :nth-child(2){
-            /* display: none; */
+            display: none;
         }
         nav :nth-child(2):checked+ul{
-            transform: translateX(0);
+            display: block;
         }
         nav i{
             padding: 7px;
@@ -47,6 +47,7 @@
         nav ul{
             position: absolute;
             /* right: 60px; */
+            display: none;
             transition: transform .4s ease;
         }
     </style>
@@ -62,21 +63,23 @@
         </label>
         <input type="checkbox" id="menu">
         <ul>
-            <li>Estudios</li>
-            <li>Skills</li>
-            <li>Idiomas</li>
-            <li>Experiencia</li>
-            <li>Contacto</li>
+            <li><a name="estudios">Estudios</a></li>
+            <li><a name="Skills">Skills</a></li>
+            <li><a name="Idiomas">Idiomas</a></li>
+            <li><a name ="Experiencia">Experiencia</a></li>
+            <li><a name = "Contacto">Contacto</a></li>
         </ul>
     </nav>
     <section>
         <article>
+            <a href="#estudios"></a>
             <h2>Información Académica</h2>
             <ul>
                 <li>Grado Superior Desarrollo de Aplicaciones Web</li>
             </ul>
         </article>
         <article>
+            <a href="#Skills"></a>
             <h2>Skills</h2>
             <div class="lenguajes">
                 <span>Java</span>
@@ -89,7 +92,9 @@
             </div>
         </article>
         <article>
+            <a href="#Idiomas"></a>
             <h2>Idiomas</h2>
+
             <div class="idiomas">
                 <div class="ingles">
                     <img src="./imagenes/ingles.jpg">
@@ -106,6 +111,7 @@
             </div>
         </article>
         <article>
+            <a href="#Experiencia"></a>
             <h2>Experiencia Laboral</h2>
             <div class="experiencia">
                 <div> LIUJO </div>
@@ -122,6 +128,7 @@
             <img src="./imagenes/WhatsApp.png" alt="Whatsapp">
         </div>
         <article>
+            <a href="#Contacto"></a>
             <h2>Contacto</h2>
             <input type="text" name="nombre" placeholder="Nombre *" required>
             <input type="text" name="email" placeholder="Email *" required>
