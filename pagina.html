@@ -11,92 +11,102 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
         /*Encabezado*/
-        header{
+        .cabecera{
             display: flex;
             flex-direction: column;
-            height: 30vh;
+            height: 35vh;
             justify-content: center;
             align-items: center;
             gap: 20px;
+            margin-top: 15px;
+            margin-bottom: 15px;
 
         }
-        header>img{
-            width: 200px;
+        .cabecera__imagen{
+            width: 150px;
             border-radius: 100px;
         }
-        h1{
-            font-size: 2em;
+        .cabecera__titulo{
+            font-size: 1.5em;
             font-family: 'Roboto Condensed', sans-serif;
         }
 
         /*Estilos nav*/
-        nav{
-            position: absolute;
+        .menu{
+            position: fixed;
             top: 0;
         }
-        nav :nth-child(2){
+        .menu__display{
             display: none;
         }
-        nav :nth-child(2):checked+ul{
+        .menu__display:checked+ul{
             display: block;
         }
-        nav i{
+        .menu__label__icono{
             padding: 7px;
-            font-size: 1.5em;
+            font-size: 1.7em;
+          
         }
-        nav ul{
+        .menu__lista{
             position: absolute;
             /* right: 60px; */
             display: none;
             transition: transform .4s ease;
+            background-color: aqua;
+            padding: 5px;
+        }
+        
+        .lista__elemento{
+            margin: 15px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="./imagenes/perfil.jpg">
-        <h1>Carlota Menéndez Álvarez</h1>
+    <header class="cabecera">
+        <img class="cabecera__imagen" src="./imagenes/perfil.jpg">
+        <h1 class="cabecera__titulo">Carlota Menéndez Álvarez</h1>
     </header>
-    <nav>
-        <label for="menu">
-            <i class="fa-solid fa-bars"></i>
+    <nav class="menu">
+        <label class="menu__label" for="menu">
+            <i class="menu__label__icono fa-solid fa-bars"></i>
         </label>
-        <input type="checkbox" id="menu">
-        <ul>
-            <li><a name="estudios">Estudios</a></li>
-            <li><a name="Skills">Skills</a></li>
-            <li><a name="Idiomas">Idiomas</a></li>
-            <li><a name ="Experiencia">Experiencia</a></li>
-            <li><a name = "Contacto">Contacto</a></li>
+        <input class="menu__display" type="checkbox" id="menu">
+        <ul class="menu__lista">
+            <li class="lista__elemento"><a class="lista__texto" href="#estudios">Estudios</a></li>
+            <li class="lista__elemento"><a class="lista__texto" href="#Skills">Skills</a></li>
+            <li class="lista__elemento"><a class="lista__texto" href="#Idiomas">Idiomas</a></li>
+            <li class="lista__elemento"><a class="lista__texto" href="#Experiencia">Experiencia</a></li>
+            <li class="lista__elemento"><a class="lista__texto" href="#Contacto">Contacto</a></li>
         </ul>
     </nav>
-    <section>
-        <article>
-            <a href="#estudios"></a>
-            <h2>Información Académica</h2>
-            <ul>
-                <li>Grado Superior Desarrollo de Aplicaciones Web</li>
+    <section class="seccion">
+        <article class="seccion__articulo">
+            <a name="estudios"></a>
+            <h2 class="articulo__subtitulo">Información Académica</h2>
+            <ul class="articulo__lista">
+                <li class="articulo__lista__texto">Grado Superior Desarrollo de Aplicaciones Web</li>
             </ul>
         </article>
-        <article>
-            <a href="#Skills"></a>
-            <h2>Skills</h2>
-            <div class="lenguajes">
-                <span>Java</span>
-                <span>JavaScript</span>
-                <span>CSS</span>
-                <span>HTML</span>
-                <span>XML</span>
-                <span>SQL</span>
+        <article class="seccion__articulo">
+            <a name="Skills"></a>
+            <h2 class="articulo__subtitulo">Skills</h2>
+            <div class="articulo__recuadros lenguajes">
+                <span class="recuadros__span">Java</span>
+                <span class="recuadros__span">JavaScript</span>
+                <span class="recuadros__span">CSS</span>
+                <span class="recuadros__span">HTML</span>
+                <span class="recuadros__span">XML</span>
+                <span class="recuadros__span">SQL</span>
 
             </div>
         </article>
-        <article>
-            <a href="#Idiomas"></a>
-            <h2>Idiomas</h2>
-
-            <div class="idiomas">
-                <div class="ingles">
+        <article class="seccion__articulo">
+            <a name="Idiomas"></a>
+            
+            <h2 class="articulo__subtitulo">Idiomas</h2>
+<!-- Mirar estas lineas -->
+            <div class="articulo__contenedor idiomas">
+                <div class="contenedor__subcontenedor ingles">
                     <img src="./imagenes/ingles.jpg">
                     <p>Inglés B2</p>
                 </div>
@@ -110,36 +120,37 @@
                 </div>
             </div>
         </article>
-        <article>
-            <a href="#Experiencia"></a>
-            <h2>Experiencia Laboral</h2>
-            <div class="experiencia">
-                <div> LIUJO </div>
-                <div> Springfield </div>
-                <div> Coconut By Elisabeth </div>
-                <div> Stradivarius </div>
-                <div> ZARA </div>
+        <article class="seccion__articulo">
+            <a name ="Experiencia"></a>
+            
+            <h2 class="articulo__subtitulo">Experiencia Laboral</h2>
+            <div class="articulo__cuadrados experiencia">
+                <div class="cuadrados__cuadrado"> LIUJO </div>
+                <div class="cuadrados__cuadrado"> Springfield </div>
+                <div class="cuadrados__cuadrado"> Coconut By Elisabeth </div>
+                <div class="cuadrados__cuadrado"> Stradivarius </div>
+                <div class="cuadrados__cuadrado"> ZARA </div>
             </div>
         </article>
         <div class="redesSociales">
-            <img src="./imagenes/facebook.png" alt="facebook">
-            <img src="./imagenes/in.png" alt="linkdlin">
-            <img src="./imagenes/Instagram.png" alt="instagram">
-            <img src="./imagenes/WhatsApp.png" alt="Whatsapp">
+            <img class="redesSociales__imagen"src="./imagenes/facebook.png" alt="facebook">
+            <img class="redesSociales__imagen" src="./imagenes/in.png" alt="linkdlin">
+            <img  class="redesSociales__imagen" src="./imagenes/Instagram.png" alt="instagram">
+            <img class="redesSociales__imagen" src="./imagenes/WhatsApp.png" alt="Whatsapp">
         </div>
-        <article>
-            <a href="#Contacto"></a>
-            <h2>Contacto</h2>
-            <input type="text" name="nombre" placeholder="Nombre *" required>
-            <input type="text" name="email" placeholder="Email *" required>
-            <input type="text" name="motivo" placeholder="Motivo " >
-            <input type="text" name="compañia" placeholder="Compañia ">
-            <textarea name="texto" rows="4" cols="40" placeholder="Mensaje">.</textarea>
+        <article class="seccion__articulo">
+            <a name = "Contacto"></a>
+            <h2 class="articulo__subtitulo">Contacto</h2>
+            <input class="articulo__display" type="text" name="nombre" placeholder="Nombre *" required>
+            <input class="articulo__display" type="text" name="email" placeholder="Email *" required>
+            <input class="articulo__display" type="text" name="motivo" placeholder="Motivo " >
+            <input class="articulo__display" type="text" name="compañia" placeholder="Compañia ">
+            <textarea class="articulo__texto" name="texto" rows="4" cols="40" placeholder="Mensaje">.</textarea>
             <button>Enviar</button>
         </article>
     </section>
-    <footer>
-        <i class="fa-solid fa-arrow-up"></i>
+    <footer class="pie">
+        <i class="pie__icono fa-solid fa-arrow-up"></i>
     </footer>
 </body>
 </html>
