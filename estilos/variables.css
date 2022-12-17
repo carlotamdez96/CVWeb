@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+:root{
+    --fuente-encabezado:'Roboto Condensed', sans-serif;
+    --fuente-skills:'Press Start 2P', cursive;
+    --fuente-experiencia:'Chakra Petch', sans-serif;
+    --color-fondo-principal:#C9EBF2;
+}

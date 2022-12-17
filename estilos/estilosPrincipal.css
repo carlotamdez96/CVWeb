@@ -1,0 +1,176 @@
+        /*Encabezado*/
+        .cabecera{
+            display: flex;
+            flex-direction: column;
+            height: 30vh;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding-top: 15px;
+            /* background-color: var(--color-fondo-principal); */
+
+        }
+        .cabecera__imagen{
+            width: 150px;
+            border-radius: 100px;
+        }
+        .cabecera__titulo{
+            font-size: 1.5em;
+            font-family: var(--fuente-encabezado);
+            display:none;
+        }
+
+        /*Estilos nav*/
+        .menu{
+            position: fixed;
+            top: 0;
+        }
+        .menu__display{
+            display: none;
+        }
+        .menu__display:checked+ul{
+            display: block;
+            
+        }
+      
+        .menu__label__icono{
+            padding: 10px;
+            font-size: 1.7em;
+            position: relative;
+            z-index: 1;
+          
+        }
+        .menu__lista{
+            position: absolute;
+            /* top: -20vh;
+            right: -45vw; */
+            top: 0;
+            display: none;
+            transition: transform .4s ease;
+            background-color: aqua;
+            padding: 5px;
+            height: 55vh;
+            width: 55vw;
+            border-radius: 0px 0px 200px 0px;
+            
+        }
+        .lista__elemento{
+            margin: 40px;
+        }
+      
+        
+        /* Estilos de la seccion*/
+        .seccion__articulo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:flex-start;
+            padding: 30px;
+            gap:20px;
+            /* background-color: var(--color-fondo-principal); */
+        }
+
+
+        /*Estilos a los article*/
+
+        .articulo__subtitulo{
+            font-size: 1.5em;
+        }
+        .body__ola{
+            width: 100vw;
+        }
+            /* Estilos de las imagenes*/
+            .idiomas__imagen{
+                height: 10px;
+            }
+            .redesSociales__imagen{
+                height: 20px;
+            }
+
+            /*Estilo para los estudios*/
+            .redesSociales{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+            }
+        
+
+            /*Estilos para los Skills*/
+           .seccion :nth-child(1){
+            background-color: white;
+           }
+            .articulo__recuadros{
+                display: flex;
+                flex-direction: row;
+                flex-grow: 1;
+                gap:20px;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+            .recuadros__span{
+                font-family: var(--fuente-skills);
+                font-size: .8em;
+                color: red;
+            }
+            /*Estilos para idiomas*/
+            .articulo__contenedor{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                
+            }
+            .contenedor__subcontenedor{
+                display:flex;
+                flex-direction: row;
+                gap: 7px;
+            }
+
+            /*Estilos Experiencia*/
+            .articulo__cuadrados{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 20px;
+                color: white;
+                font-size: 1.3em;
+                font-family: var(--fuente-experiencia);
+            }
+            .cuadrados__cuadrado{
+                width: 140px;
+                height: 140px;
+                background-color: black;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            }
+            .cuadrados__cuadrado>span{
+                font-size: 0.6em;
+            }
+         
+            /*Estilos cuestionario*/
+            .articulo__cuestionario{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .cuestionario__boton{
+                background-color: black;
+                color: white;
+            }
+            .cuestionario__boton:hover{
+                background-color: white;
+                color: black;
+            }
+
+            /*Estilos pie de pagina*/
+            footer{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .pie__icono{
+                font-size: 1.5em;
+                cursor: pointer;
+            }
