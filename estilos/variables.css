@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Source+Sans+Pro:wght@300&display=swap');
 :root{
+    --fuente-texto:'Source Sans Pro', sans-serif;
+    --fuente-subtitulo:'Caveat', cursive;
     --fuente-encabezado:'Roboto Condensed', sans-serif;
     --fuente-skills:'Press Start 2P', cursive;
     --fuente-experiencia:'Chakra Petch', sans-serif;
-    --color-fondo-principal:#C9EBF2;
+    --color-fondo-principal:#F2BBCF;
+    --color-fondo-secundario:#F2F2F2;
+    --color-naranja:#F2AC57;
 }
