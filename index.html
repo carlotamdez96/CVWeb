@@ -6,70 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlota Menendez Alvarez</title>
     <script src="https://kit.fontawesome.com/daec488c78.js" crossorigin="anonymous"></script>
-    
     <link rel="stylesheet" href="./estilos/reset.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
-        /*Encabezado*/
-        .cabecera{
-            display: flex;
-            flex-direction: column;
-            height: 35vh;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            margin-top: 15px;
-            margin-bottom: 15px;
-
-        }
-        .cabecera__imagen{
-            width: 150px;
-            border-radius: 100px;
-        }
-        .cabecera__titulo{
-            font-size: 1.5em;
-            font-family: 'Roboto Condensed', sans-serif;
-        }
-
-        /*Estilos nav*/
-        .menu{
-            position: fixed;
-            top: 0;
-        }
-        .menu__display{
-            display: none;
-        }
-        .menu__display:checked+ul{
-            display: block;
-            
-        }
-      
-        .menu__label__icono{
-            padding: 7px;
-            font-size: 1.7em;
-          
-        }
-        .menu__lista{
-            position: sticky;
-            /* right: 60px; */
-            display: none;
-            transition: transform .4s ease;
-            background-color: aqua;
-            padding: 5px;
-            height: 100vh;
-            
-        }
-        
-        .lista__elemento{
-            margin: 30px;
-            /* margin-top: 40px;
-            margin-bottom: 40px; */
-        }
-    </style>
+    <link rel="stylesheet" href="./estilos/variables.css">
+    <link rel="stylesheet" href="./estilos/estilosPrincipal.css">
     <script>
         window.onload=function(){
 
             //Cuando haga click en cualquier elemento de la lista el menu se cierre
+            // let anclas = document.querySelectorAll(".lista__texto");
+            // var pulsado = false;
+            // for (let ancla of anclas) {
+            //     ancla.addEventListener("click",cierraMenu);
+            //     function cierraMenu(){
+            //         if(!pulsado){
+            //             ancla.parentNode.parentNode.style.display="none";
+            //             pulsado=true;
+            //             // ancla.parentNode.parentNode.previousSibling.checked="false";
+            //         }else{
+            //             ancla.parentNode.parentNode.style.display="block";
+            //             pulsado=false;
+            //             // ancla.parentNode.parentNode.previousSibling.checked="true";
+            //         }
+                    
+            //     }
+            // }
+
+            //Cuando haga click sobre el recuadro de experiencia, que se borre contenido y se añada el nombre del lugar  arriba y debajo de tal año a tal. Y debajo funciones
+         
+                let experiencias = document.querySelectorAll(".cuadrados__cuadrado");
+            for (let experiencia of experiencias) {
+                experiencia.addEventListener("click",cambiaExperiencia);
+                function cambiaExperiencia(){
+                    let nombre = experiencia.textContent.trim();
+                    let texto ="";
+                    switch(nombre){
+                        case "Albeniz":
+                        experiencia.innerHTML += `<br> <span>2022- <br> Camarera </span>`;
+                        break;
+                        case "LIUJO":
+                        experiencia.innerHTML += `<br> <span>2020-2022 <br> Dependienta </span>`;
+                        break;
+                        case "Springfield":
+                        experiencia.innerHTML += `<br> <span>2020-2022 <br> Dependienta </span>`;
+                        break;
+                        case "Coconut":
+                        experiencia.innerHTML += `<br> <span>2020-2022 <br> Dependienta </span>`;
+                        break;
+                        case "Stradivarius":
+                        experiencia.innerHTML += `<br> <span>2020-2022 <br> Dependienta </span>`;
+                        break;
+                        case "ZARA":
+                        experiencia.innerHTML += `<br> <span>2020-2022 <br> Dependienta </span>`;
+                        break;
+
+                    }
+                }
+            } 
+      /*Cuando haga click en la flecha suba hasta arriba del todo*/
+        let flecha = document.querySelector(".pie__icono").addEventListener("click",subeArriba);
+
+        function subeArriba(){
+            window.scrollTo(0,0);
+        }
+
             
 
         }
@@ -85,6 +84,7 @@
             <i class="menu__label__icono fa-solid fa-bars"></i>
         </label>
         <input class="menu__display" type="checkbox" id="menu">
+        
         <ul class="menu__lista">
             <li class="lista__elemento"><a class="lista__texto" href="#estudios">Estudios</a></li>
             <li class="lista__elemento"><a class="lista__texto" href="#Skills">Skills</a></li>
@@ -92,15 +92,24 @@
             <li class="lista__elemento"><a class="lista__texto" href="#Experiencia">Experiencia</a></li>
             <li class="lista__elemento"><a class="lista__texto" href="#Contacto">Contacto</a></li>
         </ul>
+        </div>
+        
     </nav>
     <section class="seccion">
         <article class="seccion__articulo">
             <a name="estudios"></a>
-            <h2 class="articulo__subtitulo">Información Académica</h2>
-            <ul class="articulo__lista">
-                <li class="articulo__lista__texto">Grado Superior Desarrollo de Aplicaciones Web</li>
-            </ul>
+            <h2 class="articulo__subtitulo">¡Hola! Mi nombre es Carlota y soy desarrolladora de páginas Web</h2>
+            <p class="articulo__parrafo">
+            Aprendí todo lo relacionado con el desarrollo web  en CIFP La Laboral en Gijón. Allí estudié un Grado Superior de Desarrollo de Aplicaciones Web (2021-2023). 
+            </p>
+            <div class="redesSociales">
+                <a href="https://www.facebook.com/carlota.menendezalvarez"><img class="redesSociales__imagen"src="./imagenes/facebook.png" alt="facebook"></a>
+                <a href="https://www.linkedin.com/in/carlotamenendezalvarez/"><img class="redesSociales__imagen" src="./imagenes/in.png" alt="linkdlin"></a>
+                <a href="https://www.instagram.com/carlotamdez96/"><img  class="redesSociales__imagen" src="./imagenes/Instagram.png" alt="instagram"></a>
+                <a href="https://wa.me/0034645475153"><img class="redesSociales__imagen" src="./imagenes/WhatsApp.png" alt="Whatsapp"></a>
+            </div>
         </article>
+        <img class="body__ola" src="./imagenes/onda.png">
         <article class="seccion__articulo">
             <a name="Skills"></a>
             <h2 class="articulo__subtitulo">Skills</h2>
@@ -114,53 +123,55 @@
 
             </div>
         </article>
+        
         <article class="seccion__articulo">
             <a name="Idiomas"></a>
             
             <h2 class="articulo__subtitulo">Idiomas</h2>
-<!-- Mirar estas lineas -->
-            <div class="articulo__contenedor idiomas">
-                <div class="contenedor__subcontenedor ingles">
-                    <img src="./imagenes/ingles.jpg">
+            <div class="articulo__contenedor">
+                <div class="contenedor__subcontenedor">
+                    <img class="idiomas__imagen" src="./imagenes/ingles.jpg">
                     <p>Inglés B2</p>
                 </div>
-                <div class="frances">
-                    <img src="./imagenes/francia.jpg">
+                <div class="contenedor__subcontenedor">
+                    <img class="idiomas__imagen" src="./imagenes/francia.jpg">
                     <p>Francés A2</p>
                 </div>
-                <div class="español">
-                    <img src="./imagenes/español.jpg">
+                <div class="contenedor__subcontenedor">
+                    <img class="idiomas__imagen" src="./imagenes/español.jpg">
                     <p>Castellano Nativo</p>
                 </div>
             </div>
         </article>
+        
         <article class="seccion__articulo">
             <a name ="Experiencia"></a>
             
             <h2 class="articulo__subtitulo">Experiencia Laboral</h2>
             <div class="articulo__cuadrados experiencia">
+                <div class="cuadrados__cuadrado"> Albeniz </div>
                 <div class="cuadrados__cuadrado"> LIUJO </div>
                 <div class="cuadrados__cuadrado"> Springfield </div>
-                <div class="cuadrados__cuadrado"> Coconut By Elisabeth </div>
+                <div class="cuadrados__cuadrado"> Coconut </div>
                 <div class="cuadrados__cuadrado"> Stradivarius </div>
                 <div class="cuadrados__cuadrado"> ZARA </div>
             </div>
         </article>
-        <div class="redesSociales">
-            <img class="redesSociales__imagen"src="./imagenes/facebook.png" alt="facebook">
-            <img class="redesSociales__imagen" src="./imagenes/in.png" alt="linkdlin">
-            <img  class="redesSociales__imagen" src="./imagenes/Instagram.png" alt="instagram">
-            <img class="redesSociales__imagen" src="./imagenes/WhatsApp.png" alt="Whatsapp">
-        </div>
+        <img class="body__ola" src="./imagenes/onda2.png" >
+        
+        
         <article class="seccion__articulo">
             <a name = "Contacto"></a>
             <h2 class="articulo__subtitulo">Contacto</h2>
-            <input class="articulo__display" type="text" name="nombre" placeholder="Nombre *" required>
-            <input class="articulo__display" type="text" name="email" placeholder="Email *" required>
-            <input class="articulo__display" type="text" name="motivo" placeholder="Motivo " >
-            <input class="articulo__display" type="text" name="compañia" placeholder="Compañia ">
-            <textarea class="articulo__texto" name="texto" rows="4" cols="40" placeholder="Mensaje">.</textarea>
-            <button>Enviar</button>
+            <div class="articulo__cuestionario">
+                <input class="articulo__display" type="text" name="nombre" placeholder="Nombre *" required>
+                <input class="articulo__display" type="text" name="email" placeholder="Email *" required>
+                <input class="articulo__display" type="text" name="motivo" placeholder="Motivo " >
+                <input class="articulo__display" type="text" name="compañia" placeholder="Compañia ">
+                <textarea class="articulo__texto" name="texto" rows="4" cols="40" placeholder="Mensaje">.</textarea>
+                <button class="cuestionario__boton">Enviar</button>
+            </div>
+            
         </article>
     </section>
     <footer class="pie">
