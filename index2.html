@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlota Menendez Alvarez</title>
+    <script src="https://kit.fontawesome.com/daec488c78.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./estilos/reset.css">
+    <link rel="stylesheet" href="./estilos/variables.css">
+    <link rel="stylesheet" href="./estilos/estilosPrincipal.css">
+    <script>
+        window.onload=function(){
+
+            // Cuando haga click en cualquier elemento de la lista el menu se cierre
+            
+            // let anclas = document.querySelectorAll(".lista__texto");
+            // var pulsado = false;
+            // for (let ancla of anclas) {
+            //     ancla.addEventListener("click",cierraMenu);
+            //     function cierraMenu(){
+                  
+            //         if(!pulsado){
+            //             ancla.parentNode.parentNode.style.display="none";
+            //             pulsado=true;
+            //             document.querySelector("menu__display").click();
+                       
+            //         }else{
+            //             ancla.parentNode.parentNode.style.display="block";
+            //             pulsado=false;
+                        
+            //         }
+                    
+            //     }
+            // }
+
+            //Cuando haga click sobre el recuadro de experiencia, que se borre contenido y se añada el nombre del lugar  arriba y debajo de tal año a tal. Y debajo funciones
+         
+                let experiencias = document.querySelectorAll(".cuadrados__cuadrado");
+            for (let experiencia of experiencias) {
+                experiencia.addEventListener("click",cambiaExperiencia);
+                function cambiaExperiencia(){
+                    let nombre = experiencia.textContent.trim();
+                    let texto ="";
+                    switch(nombre){
+                        case "Booking":
+                        experiencia.innerHTML += `<br> <span>2022- <br> Gestión Viviendas</span>`;
+                        break;
+                        case "LIUJO":
+                        experiencia.innerHTML += `<br> <span>2020-2022 <br> Dependienta </span>`;
+                        break;
+                        case "Springfield":
+                        experiencia.innerHTML += `<br> <span>2019-2020 <br> Dependienta </span>`;
+                        break;
+                        case "Coconut":
+                        experiencia.innerHTML += `<br> <span>2018-2018 <br> Dependienta </span>`;
+                        break;
+                        case "Stradivarius":
+                        experiencia.innerHTML += `<br> <span>2016-2017 <br> Dependienta </span>`;
+                        break;
+                        case "ZARA":
+                        experiencia.innerHTML += `<br> <span>2015-2016 <br> Dependienta </span>`;
+                        break;
+
+                    }
+                }
+            } 
+      /*Cuando haga click en la flecha suba hasta arriba del todo*/
+        let flecha = document.querySelector(".pie__icono").addEventListener("click",subeArriba);
+
+        function subeArriba(){
+            window.scrollTo(0,0);
+        }
+
+        }
+    </script>
+</head>
+<body>
+    <header class="cabecera">
+        <img class="cabecera__imagen" src="./imagenes/foto.jpg">
+        <a href="./adicional.html"><i class="cabecera__iconoVideo fa-solid fa-video"></i></a>
+        
+        <h1 class="cabecera__titulo">Carlota Menéndez Álvarez</h1>
+    </header>
+    <nav class="menu">
+        <label class="menu__label" for="menu">
+            <i class="menu__label__icono fa-solid fa-bars"></i>
+            <!-- <i class="fas fa-times"></i> -->
+        </label>
+        <input class="menu__display" type="checkbox" id="menu">
+        
+        <ul class="menu__lista">
+            <li class="lista__elemento"><a class="lista__texto" href="#estudios">Estudios</a></li>
+            <li class="lista__elemento"><a class="lista__texto" href="#Skills">Skills</a></li>
+            <li class="lista__elemento"><a class="lista__texto" href="#Idiomas">Idiomas</a></li>
+            <li class="lista__elemento"><a class="lista__texto" href="#Experiencia">Experiencia</a></li>
+            <li class="lista__elemento"><a class="lista__texto" href="#Contacto">Contacto</a></li>
+        </ul>
+        </div>
+        
+    </nav>
+    <section class="seccion">
+        <article class="seccion__articulo">
+            <a name="estudios"></a>
+            <h2 class="articulo__subtitulo">¡Hola! Mi nombre es Carlota y soy desarrolladora Full-Stack</h2>
+            <p class="articulo__parrafo">
+            Me encanta crear sitios web que brinden una experiencia de usuario única y satisfactoria. Puedes encontrar algunos de mis proyectos en mi GitHub.<br>
+            Soy una persona <strong> autodidacta</strong>, <strong>responsable</strong> y <strong>comprometida</strong> con mi trabajo. Constantemente estoy aprendiendo nuevas tecnologias y herramientas para mejorar mis habilidades.<br>
+            Aprendí todo lo relacionado con el desarrollo web  en CIFP La Laboral en Gijón. Allí estudié un <strong>Grado Superior de Desarrollo de Aplicaciones Web</strong> (2021-2023). <br>
+            No dudes en contactar conmigo si tienes alguna pregunta.
+            </p>
+            <div class="redesSociales">
+                <a href="https://www.facebook.com/carlota.menendezalvarez" target="_blank"><img class="redesSociales__imagen"src="./imagenes/facebook.png" alt="facebook"></a>
+                <a href="https://www.linkedin.com/in/carlotamenendezalvarez/" target="_blank"><img class="redesSociales__imagen" src="./imagenes/in.png" alt="linkdlin"></a>
+                <a href="https://www.instagram.com/carlotamdez96/" target="_blank"><img  class="redesSociales__imagen" src="./imagenes/Instagram.png" alt="instagram"></a>
+                <a href="https://wa.me/0034645475153" target="_blank"><img class="redesSociales__imagen" src="./imagenes/WhatsApp.png" alt="Whatsapp"></a>
+                <a href="https://github.com/carlotamdez96?tab=repositories" target="_blank"><img class="redesSociales__imagen" src="./imagenes/github.png" alt="github"></a>
+            </div>
+            
+        </article>
+        <img class="body__ola" src="./imagenes/onda.png">
+        <article class="seccion__articulo">
+            <a name="Skills"></a>
+            <h2 class="articulo__subtitulo">Skills</h2>
+            <div class="articulo__recuadros lenguajes">
+                <span class="recuadros__span">Java
+                    <img class="recuadros__span__imagen" src="./imagenes/java.png" alt="">
+                </span>
+                <span class="recuadros__span">JavaScript
+                    <img class="recuadros__span__imagen" src="./imagenes/js.png" alt="">
+                </span>
+                <span class="recuadros__span">CSS
+                    <img class="recuadros__span__imagen" src="./imagenes/css.png" alt="">
+                </span>
+                <span class="recuadros__span">HTML
+                    <img class="recuadros__span__imagen" src="./imagenes/html.png" alt="">
+                </span>
+                <span class="recuadros__span">XML
+                    <img class="recuadros__span__imagen" src="./imagenes/xml.png" alt="">
+                </span>
+                <span class="recuadros__span">SQL
+                    <img class="recuadros__span__imagen" src="./imagenes/sql.png" alt="">
+                </span>
+
+            </div>
+        </article>
+        
+        <article class="seccion__articulo">
+            <a name="Idiomas"></a>
+            
+            <h2 class="articulo__subtitulo">Idiomas</h2>
+            <div class="articulo__contenedor">
+                <div class="contenedor__subcontenedor">
+                    <img class="idiomas__imagen" src="./imagenes/ingles.jpg">
+                    <p>Inglés B2</p>
+                </div>
+                <div class="contenedor__subcontenedor">
+                    <img class="idiomas__imagen" src="./imagenes/francia.jpg">
+                    <p>Francés A2</p>
+                </div>
+                <div class="contenedor__subcontenedor">
+                    <img class="idiomas__imagen" src="./imagenes/español.jpg">
+                    <p>Castellano Nativo</p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="seccion__articulo">
+            <a name ="Experiencia"></a>
+            
+            <h2 class="articulo__subtitulo">Experiencia Laboral</h2>
+            <div class="articulo__cuadrados experiencia">
+                <div class="cuadrados__cuadrado"> Booking </div>
+                <div class="cuadrados__cuadrado"> LIUJO </div>
+                <div class="cuadrados__cuadrado"> Springfield </div>
+                <div class="cuadrados__cuadrado"> Coconut </div>
+                <div class="cuadrados__cuadrado"> Stradivarius </div>
+                <div class="cuadrados__cuadrado"> ZARA </div>
+            </div>
+        </article>
+        <img class="body__ola rosa" src="./imagenes/onda2.png" >
+        
+        
+        <article class="seccion__articulo">
+            <a name = "Contacto"></a>
+            <h2 class="articulo__subtitulo">Contacto</h2>
+            <form class="articulo__cuestionario" action="prueba.php" method="get">
+                <input class="articulo__display" type="text" name="nombre" placeholder="Nombre *" required>
+                <input class="articulo__display" type="text" name="email" placeholder="Email *" required>
+                <input class="articulo__display" type="text" name="motivo" placeholder="Motivo " >
+                <input class="articulo__display" type="text" name="compañia" placeholder="Compañia ">
+                <textarea class="articulo__texto" name="texto" rows="4" cols="40" placeholder="Mensaje"></textarea>
+                <button class="cuestionario__boton">Enviar</button>
+            </form>
+
+            <!-- añadir asi el videocv -->
+            <!-- <video class="cambiar" src="./videos/IMG_8593.mp4" controls > </video> -->
+        </article>
+    </section>
+    <footer class="pie">
+        <i class="pie__icono fa-solid fa-arrow-up"></i>
+    </footer>
+</body>
+</html>
