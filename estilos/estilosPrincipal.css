@@ -142,7 +142,7 @@
         }
             /* Estilos de las imagenes*/
             .idiomas__imagen{
-                height: 25px;
+                height: 160px;
             }
             .redesSociales__imagen{
                 height: 25px;
@@ -180,17 +180,32 @@
                display: none;
                 height: 60px;
             }
-            /*Estilos para idiomas*/
+            /*Estilos para proyectos*/
             .articulo__contenedor{
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: center;
+                /* justify-content: space-between; */
+                flex-wrap: wrap;
+                width: 100%;
                 gap: 20px;
                 
             }
             .contenedor__subcontenedor{
                 display:flex;
-                flex-direction: row;
-                gap: 7px;
+                flex-direction: column;
+                align-items: center;
+                /* gap: 1px; */
+            }
+            .subcontenedor__enlace{
+                cursor: pointer;
+                font-size: 1.2em;
+                background-color: #eb8eb0;
+                border: 2px solid #f88cb3;
+                color: white;
+                padding: 7px;
+                border-radius: 1.4em;
+                font-family: var(--fuente-texto);
             }
 
             /*Estilos Experiencia*/
@@ -305,34 +320,11 @@
                 padding-bottom: 30px;
             }
 
-            /* Estilos para el movil horizontal */
-            @media (min-width: 660px) {
-
-                .cabecera{     
-                    height: 57vh;
-                }
-
-                .body__ola{
-                    width: 100vw;
-                    margin-top: -250px;
-                    margin-bottom: -10px;
-                }
-                .seccion article:nth-of-type(1){
-                    padding-bottom: 180px;
-                    font-size: 1.3em;
-                    /* padding-top: 100px; */
-                    
-                }
-                .menu__lista{
         
-                    font-size: 1.4em;
-                    height: 100vh;
-                    width: 30vw;
-                    border-radius: 0px 0px 0px 0px;
-                }
-            }
+                
+           
             /*Tablets*/
-            @media (min-width: 768px) {
+            @media (min-width: 768px) and (min-height:1024px){
 
                 .cabecera{     
                     height: 40vh;
@@ -345,12 +337,19 @@
                     font-size: 1.7em;
                     cursor: pointer;
                 }
+                
+                .body__ola{
+                    width: 100vw;
+                    margin-top: -250px;
+                    margin-bottom: -10px;
+                }
                 /*Estilos menu*/
                 .menu__label__icono{
                     font-size: 3.5em;
                 }
                 .menu__lista{    
                     width: 40vw;  
+                    height: 100vh;
                 }
                 .lista__texto{
                     line-height: 100px;
@@ -379,7 +378,9 @@
                 .cuadrados__cuadrado{
                     height: 200px;
                     width: 200px;
+                    font-size: 1.3em;
                 }
+            
 
                 .cuadrados__cuadrado::before{
                     border-right: 5px solid var(--color-naranja);
@@ -396,6 +397,22 @@
                     bottom: -6px;
                     right: -6px;
                 }
+                /*Estilos para los proyectos*/
+                .articulo__contenedor{
+    
+                justify-content: space-between;
+         
+               }
+            
+                .subcontenedor__enlace{
+                    cursor: pointer;
+                    font-size: 1.5em;
+                    
+                }
+                  .idiomas__imagen{
+                height: 200px;
+                 }
+
                 /*Estilos cuestionario*/
                 .articulo__display,.articulo__texto, .cuestionario__boton{
                     font-size: 1.5em;
@@ -414,6 +431,42 @@
                 }
                
             }
+              /* Estilos para el movil horizontal */
+              @media (min-height: 375px) and (min-width: 600px) {
+
+                .cabecera{     
+                    height: 57vh;
+                }
+
+                .body__ola{
+                    width: 100vw;
+                    margin-top: -270px;
+                    margin-bottom: -10px;
+                }
+                .seccion article:nth-of-type(1){
+                    padding-bottom: 180px;
+                    font-size: 1.3em;
+                    
+                }
+                .articulo__recuadros{
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                }
+                .menu__lista{
+        
+                    font-size: 1.4em;
+                    height: 100vh;
+                    width: 30vw;
+                    border-radius: 0px 0px 0px 0px;
+                }
+                /*Estilos para los proyectos*/
+                .articulo__contenedor{
+    
+                    justify-content: space-between;
+             
+                   }
+            } 
             /*Pantallas enteras*/
             @media (min-width: 992px) {
 
@@ -520,6 +573,31 @@
                     height: 30px;
                 
                 }
+                 /*Estilos para los proyectos*/
+                .articulo__contenedor{
+    
+                  justify-content: space-around;
+         
+                 }
+            
+                .subcontenedor__enlace{
+                    cursor: pointer;
+                    font-size: 1.5em;
+                    
+                    font-weight: 500;
+                }
+                .subcontenedor__enlace:hover{
+                   
+                    /* border-radius: 0; */
+                    background-color: var(--color-verde-pastel);
+                    color:#eb8eb0;
+                    border: 0;
+                    transition: background-color 1s ease 0s;
+                }
+                  .idiomas__imagen{
+                height: 250px;
+                 }
+
                 /*Estilos para la imagen de portada*/
                 .cabecera__imagen{
                     border-radius: 0%;
@@ -615,3 +693,4 @@
                 height: 50vh;
               }
             }
+            
