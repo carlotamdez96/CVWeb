@@ -67,14 +67,13 @@
             height: 60vh;
             width: 55vw;
             border-radius: 0px 0px 200px 0px;
-            font-family: var(--fuente-menu);
-            
-            
+            font-family: var(--fuente-menu);   
         }
         .lista__elemento{
             margin: 25%;
         }
       
+
         
         /* Estilos de la seccion*/
         .seccion__articulo{
@@ -84,8 +83,6 @@
             align-items:flex-start;
             padding: 40px;
             gap:20px;
-            
-            /* margin-bottom: 10px; */
             font-family: var(--fuente-texto);
                         
         }
@@ -118,6 +115,7 @@
             padding-top: 0;
         }
 
+
         /*Estilos a los article*/
 
         .articulo__subtitulo{
@@ -140,6 +138,7 @@
             margin-top: -150px;
             margin-bottom: -10px;
         }
+
             /* Estilos de las imagenes*/
             .idiomas__imagen{
                 height: 160px;
@@ -154,7 +153,6 @@
                 flex-direction: row;
                 gap: 10px;
                 cursor: pointer;
-                /* filter:grayscale(50%); */
             
             }
         
@@ -180,6 +178,8 @@
                display: none;
                 height: 60px;
             }
+
+
             /*Estilos para proyectos*/
             .articulo__contenedor{
                 display: flex;
@@ -208,6 +208,7 @@
                 font-family: var(--fuente-texto);
             }
 
+
             /*Estilos Experiencia*/
             .articulo__cuadrados{
                 display: flex;
@@ -219,7 +220,7 @@
                 font-size: 1.2em;
                 font-family: var(--fuente-experiencia);
             }
-            
+            /*Animacion*/
             @keyframes pulsaAnimacion {
                 0% {
                     animation-timing-function: ease-out;
@@ -259,14 +260,12 @@
                 position: relative;
                 z-index: 0;
                 cursor: pointer;
-                /* animation: myAnim 3s ease 1s infinite normal forwards; */
                 animation: pulsaAnimacion 8s ease 0s infinite normal forwards;
              
             }
             .cuadrados__cuadrado::before{
                 position: absolute;
                 display: block;
-           
                 content: "";
                 border-right: 3px solid var(--color-naranja);
                 border-bottom: 115px solid var(--color-naranja);
@@ -284,6 +283,8 @@
             .cuadrados__cuadrado>span{
                 font-size: 0.6em;
             }
+
+
          
             /*Estilos cuestionario*/
             .articulo__cuestionario{
@@ -305,6 +306,8 @@
                 background-color: white;
                 color: black;
             }
+
+
 
             /*Estilos pie de pagina*/
             footer{
@@ -375,6 +378,7 @@
                 .articulo__recuadros{
                     font-size: 2em;
                 }
+                /*Estilos experiencia*/
                 .cuadrados__cuadrado{
                     height: 200px;
                     width: 200px;
@@ -431,6 +435,8 @@
                 }
                
             }
+
+
               /* Estilos para el movil horizontal */
               @media (min-height: 375px) and (min-width: 600px) {
 
@@ -467,6 +473,8 @@
              
                    }
             } 
+
+
             /*Pantallas enteras*/
             @media (min-width: 992px) {
 
@@ -475,6 +483,7 @@
                     z-index: -2;
                     background-color: var(--color-fondo-principal);
                 }
+
                 /*Estilos para el menu*/
                 .menu__label{
                     display: none;
@@ -573,6 +582,7 @@
                     height: 30px;
                 
                 }
+
                  /*Estilos para los proyectos*/
                 .articulo__contenedor{
     
@@ -598,6 +608,7 @@
                 height: 250px;
                  }
 
+
                 /*Estilos para la imagen de portada*/
                 .cabecera__imagen{
                     border-radius: 0%;
@@ -605,12 +616,9 @@
                     position: relative;
                     border-bottom: 5px solid var(--color-naranja);
                     border-right: 5px solid var(--color-naranja);
-                    /* animation: rotate 3s linear infinite; */
+                    
                 }
-                /* @keyframes rotate{
-                    from{transform: rotate(0deg)}
-                    to{transform: rotate(359deg)}
-                } */
+            
                 /*Estilos para skills*/
                 .articulo__recuadros{
 
@@ -640,6 +648,8 @@
                     /* height: 120px; */
                     animation: animacion 5s ease 0s infinite normal forwards;
                 }
+
+                
                 /*Estilos para recuadros de experiencia*/
                
                 .articulo__cuadrados{

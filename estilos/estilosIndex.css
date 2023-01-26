@@ -44,6 +44,9 @@ body{
     outline: 4px solid #C3FAC4;
 }
 
+
+
+
 @media (min-width: 992px) {
     .encabezado__boton{
         height: 35px;

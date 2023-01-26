@@ -38,6 +38,10 @@ body{
     width: 350px;
     height: 200px;
 }
+
+
+
+
 /*Pantallas enteras*/
 @media (min-width: 992px) {
     .articulo__video{
@@ -52,6 +56,9 @@ body{
     }
     
 }
+
+
+
 /*Tablets*/
 
 @media (min-width: 768px) {
@@ -61,6 +68,8 @@ body{
         height: 355px;
     }
 }
+
+
 /*Moviles en horizontal*/
 @media (min-width: 660px) {
 
